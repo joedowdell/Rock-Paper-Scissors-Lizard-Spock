@@ -38,3 +38,9 @@ Game.prototype.winner = function() {
     return this.player2;
   }
 };
+
+Game.prototype.victoryMessage = function(winner) {
+	return ("Congratulations " + winner);
+};
+
+
