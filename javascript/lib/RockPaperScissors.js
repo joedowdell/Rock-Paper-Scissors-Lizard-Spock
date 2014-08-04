@@ -15,9 +15,11 @@ function Game(player1, player2) {
 };
 
 Game.prototype.PAIRS = {
-	rock: 		{ beats: "scissors" },
-	paper: 		{ beats: "rock"},
-	scissors: { beats: "paper"}
+	rock: 		{ beats: ["scissors", "lizard"] },
+	paper: 		{ beats: ["rock", "spock"] },
+	scissors: { beats: ["paper", "lizard"] },
+	lizard:		{ beats: ["spock", "paper"] },
+	spock:		{ beats: ["scissors", "rock"] }
 };
 
 Game.prototype.winner = function() { 
@@ -26,7 +28,10 @@ Game.prototype.winner = function() {
 	return null
 	}
 
- 	else if (this.PAIRS[this.player1.pick].beats === this.player2.pick) {
+	else if (this.PAIRS[this.player1.pick].beats[0] === this.player2.pick) {
+    return this.player1;
+  }
+ 	else if (this.PAIRS[this.player1.pick].beats[1] === this.player2.pick) {
     return this.player1;
   }
   else {
