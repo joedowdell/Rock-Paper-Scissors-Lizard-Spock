@@ -1,6 +1,7 @@
 body {
   font-family: 'Helvetica Neue';
   margin: 15px 0 0 30px;
+  text-align: center;
 }
 
 .choices img {
@@ -21,6 +22,7 @@ h2, h3 {
 
 #results {
   list-style: none;
+  text-align: center;
 }
 
 #results li {
