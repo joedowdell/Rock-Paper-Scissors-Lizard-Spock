@@ -48,8 +48,13 @@ return loser;
 };
 
 Game.prototype.victoryMessage = function(winner, loser, verb) {
-
+  if (winner === null) {
+    return 'draw'
+    }
+  else {
 	return (["Congratulations", winner.name, "your", winner.pick, verb, loser.name + "'s", loser.pick]).join(' ');
-};
+  };
+  }
+
 
 
