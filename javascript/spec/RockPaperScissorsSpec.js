@@ -204,13 +204,24 @@ describe("Rock-Paper-Scissors", function() {
 
   });
 
+
+  describe('game loser', function() {
+
+    it('should be determined based on who wins', function() {
+      player1.picks('spock');
+      player2.picks('rock');
+      expect(game.loser(game.winner())).toBe(player2);
+    });
+
+  });
+
   describe('victory message', function() {
 
     it('should state when Alex wins', function() {
 
     player1.picks('spock');
     player2.picks('rock');
-    expect(game.victoryMessage(game.winner().name)).toBe('Congratulations Alex');
+    expect(game.victoryMessage(game.winner(), game.loser(game.winner()), game.verb)).toBe("Congratulations Alex your spock vapourises Bob's rock");
 
     });
 
@@ -218,7 +229,7 @@ describe("Rock-Paper-Scissors", function() {
 
       player1.picks('rock');
       player2.picks('spock');
-      expect(game.victoryMessage(game.winner().name)).toBe('Congratulations Bob');
+      expect(game.victoryMessage(game.winner(), game.loser(game.winner()), game.verb)).toBe("Congratulations Bob your spock vapourises Alex's rock");
 
     });
 
