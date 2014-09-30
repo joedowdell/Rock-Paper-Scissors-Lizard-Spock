@@ -5,3 +5,14 @@ Rock-paper-scissors-lizard-Spock is an expansion of the classic selection method
 
 Play the game
 http://rpslsapp.herokuapp.com/
+
+
+## Technologies Used:
+
+  + Ruby
+  + HMTL
+  + CSS
+  + Javascript
+  + jQuery
+  + Jasmine
+  + Heroku
