@@ -16,3 +16,17 @@ http://rpslsapp.herokuapp.com/
   + jQuery
   + Jasmine
   + Heroku
+
+###How to set it up
+
+```sh
+git clone https://github.com/joedowdell/Rock-Paper-Scissors-Lizard-Spock.git
+```
+
+###How to run it
+
+Open _index.html_ in the browser
+
+###How to test it
+
+Open _SpecRunner.html_ in the browser
